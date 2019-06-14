@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 
+import './components.css';
+
 export default class SignIn extends React.Component {
   state = {
     username: "",
@@ -46,7 +48,7 @@ export default class SignIn extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const endpoint = "/api/signin";
+    const endpoint = "http://localhost:3000/api/login";
     axios
       .post(endpoint, this.state)
       .then(res => {

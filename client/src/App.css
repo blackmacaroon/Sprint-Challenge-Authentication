@@ -6,8 +6,16 @@
 
 }
 
-.head {
-  text-align: left;
+.app .head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.head h1 {
+  font-size: 3rem; 
+  padding:15px 0 0 15px;
+  margin: 0;
+
 }
 
 .app .nav {
@@ -24,4 +32,6 @@
 }
 .nav button {
   margin: 15px;
+  font-size: 1.4rem;
+  padding: 0 20px;
 }

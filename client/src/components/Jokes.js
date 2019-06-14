@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 
+import './components.css';
+
 class Jokes extends React.Component {
   state = {
     jokes: []
@@ -11,9 +13,9 @@ class Jokes extends React.Component {
       <>
         <h2>User List</h2>
         <ul>
-          {this.state.jokes.map(u => {
-                return(<li>hi</li>)
-            // <li key={u.id}>{u.username}</li>;
+          {this.state.jokes.map(j => {
+                return(<li key={j.id}>{j.joke}</li>)
+           
           })}
         </ul>
       </>

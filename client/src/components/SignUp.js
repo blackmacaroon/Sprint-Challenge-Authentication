@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 
+import './components.css';
+
 class SignUp extends React.Component {
   state = {
     username: "",
@@ -41,12 +43,11 @@ class SignUp extends React.Component {
   handleSubmit = async event => {
     try {
       event.preventDefault();
-      const endpoint = `/api/signup`;
+      const endpoint = 'http://localhost:3000/api/register';
       const registration = await axios.post(endpoint, this.state)
       if (registration) {
         this.setState({
           username: "",
-          department: "",
           password: ""
         })
         this.props.history.push('/signin');
