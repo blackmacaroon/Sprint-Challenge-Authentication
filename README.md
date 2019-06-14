@@ -29,9 +29,23 @@ Implement an User Authentication System in order to access the jokes from the Jo
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 1. What is the purpose of using _sessions_?
+=========================================================================
+Webpages have no memory, so as we navigate from page to page, the site treats each new load as a brand new visitor. Enter sessions. Session cookies allow users to browse many pages of a site quickly and without the need to re/process or re/authenticate ever time. (Think shopping carts, they'd be pretty useless if they didn't store your items) We developers create sessions with expirations, the session remains active until it hits the expiration parameters or until the user logs out.
+
 1. What does bcrypt do to help us store passwords in a secure manner.
+=========================================================================
+Bcrypt encodes passwords into hashes, essentially a long line of randomized scrambled case-sensitive letters and numbers. That's typical hashing, bcrypt takes it a step farther by salting the hash. The salt is an additional like of randomized characters they add to your password before they hash. This way, when two passwords are the same, their salts will make them completely different.
+
 1. What does bcrypt do to slow down attackers?
+=========================================================================
+Bcrypt is aimed at being slow. The goal is to make it as slow as possible for attackers while not being intolerably slow for the "honest systems".
+
 1. What are the three parts of the JSON Web Token?
+=========================================================================
+_header_ typically includes the type of token (jwt), and the signing algorithm being used
+_payload_ includes the claims, the info you want stored. things like expiration, issuer, subject, userid, maybe name. remember to keep it light and never include sensitive information like passwords, ssn, credit card numbers.
+_signature_ this is an encoded string, made up of the header, payload and signed with a secret, separated by '.' dots. 
+ends up looking a little something like this: 394th394t89gh9485yt3.sdhgdghiuerhkjsdbksjdghkjdghsughiurty394yieurhdhg.sdkhgsiuey348utkjrgt9w834thbkjgh984ty934therhg9e8rytejrt
 
 ## Project Set Up
 
