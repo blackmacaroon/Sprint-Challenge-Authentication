@@ -28,7 +28,8 @@ form {
   max-width: 200px;
   background-color: hsl(212, 17%, 92%); 
   border-radius: 4px;
-  padding: 1rem;
+  padding: 20px 35px;
+  height: 130px;
 }
 
 form > div {
@@ -36,8 +37,14 @@ form > div {
   flex-direction: column;
   text-align: left;
   margin-bottom: 0.5rem;
+  padding: 5px
 }
 
 form label {
   font-size: 0.7rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: white;
 }
