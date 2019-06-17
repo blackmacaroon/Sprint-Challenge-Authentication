@@ -29,9 +29,23 @@ Implement an User Authentication System in order to access the jokes from the Jo
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 1. What is the purpose of using _sessions_?
+=========================================================================
+Webpages have no memory, so as we navigate from page to page, the site treats each new load as a brand new visitor. Enter sessions. Session cookies allow users to browse many pages of a site quickly and without the need to re/process or re/authenticate ever time. (Think shopping carts, they'd be pretty useless if they didn't store your items) We developers create sessions with expirations, the session remains active until it hits the expiration parameters or until the user logs out.
+
 1. What does bcrypt do to help us store passwords in a secure manner.
+=========================================================================
+Bcrypt encodes passwords into hashes, essentially a long line of randomized scrambled case-sensitive letters and numbers. That's typical hashing, bcrypt takes it a step farther by salting the hash. The salt is an additional like of randomized characters they add to your password before they hash. This way, when two passwords are the same, their salts will make them completely different.
+
 1. What does bcrypt do to slow down attackers?
+=========================================================================
+Bcrypt is aimed at being slow. The goal is to make it as slow as possible for attackers while not being intolerably slow for the "honest systems".
+
 1. What are the three parts of the JSON Web Token?
+=========================================================================
+_header_ typically includes the type of token (jwt), and the signing algorithm being used
+_payload_ includes the claims, the info you want stored. things like expiration, issuer, subject, userid, maybe name. remember to keep it light and never include sensitive information like passwords, ssn, credit card numbers.
+_signature_ this is an encoded string, made up of the header, payload and signed with a secret, separated by '.' dots. 
+ends up looking a little something like this: 394th394t89gh9485yt3.sdhgdghiuerhkjsdbksjdghkjdghsughiurty394yieurhdhg.sdkhgsiuey348utkjrgt9w834thbkjgh984ty934therhg9e8rytejrt
 
 ## Project Set Up
 
@@ -70,3 +84,88 @@ Helpful Tip on Testing this Project:
 
 - Add a React client that connects to your API and has pages for `Sign Up`, `Sign In` and showing a list of `Jokes`.
 - Once you have the functionality down, style it!
+
+
+proof it works!!!:
+[
+  {
+    "id": "0189hNRf2g",
+    "joke": "I'm tired of following my dreams. I'm just going to ask them where they are going and meet up with them later."
+  },
+  {
+    "id": "08EQZ8EQukb",
+    "joke": "Did you hear about the guy whose whole left side was cut off? He's all right now."
+  },
+  {
+    "id": "08xHQCdx5Ed",
+    "joke": "Why didn’t the skeleton cross the road? Because he had no guts."
+  },
+  {
+    "id": "0DQKB51oGlb",
+    "joke": "What did one nut say as he chased another nut?  I'm a cashew!"
+  },
+  {
+    "id": "0LuXvkq4Muc",
+    "joke": "I knew I shouldn't steal a mixer from work, but it was a whisk I was willing to take."
+  },
+  {
+    "id": "0ga2EdN7prc",
+    "joke": "How come the stadium got hot after the game? Because all of the fans left."
+  },
+  {
+    "id": "0oO71TSv4Ed",
+    "joke": "Why was it called the dark ages? Because of all the knights. "
+  },
+  {
+    "id": "0oz51ozk3ob",
+    "joke": "A steak pun is a rare medium well done."
+  },
+  {
+    "id": "0ozAXv4Mmjb",
+    "joke": "Why did the tomato blush? Because it saw the salad dressing."
+  },
+  {
+    "id": "0wcFBQfiGBd",
+    "joke": "Did you hear the joke about the wandering nun? She was a roman catholic."
+  },
+  {
+    "id": "189xHQ7pOuc",
+    "joke": "What creature is smarter than a talking parrot? A spelling bee."
+  },
+  {
+    "id": "18Elj3EIYvc",
+    "joke": "I'll tell you what often gets over looked... garden fences."
+  },
+  {
+    "id": "18h3wcU8xAd",
+    "joke": "Why did the kid cross the playground? To get to the other slide."
+  },
+  {
+    "id": "1DIRSfx51Dd",
+    "joke": "Why do birds fly south for the winter? Because it's too far to walk."
+  },
+  {
+    "id": "1DQZDY0gVnb",
+    "joke": "What is a centipedes's favorite Beatle song?  I want to hold your hand, hand, hand, hand..."
+  },
+  {
+    "id": "1DQZvXvX8Ed",
+    "joke": "My first time using an elevator was an uplifting experience. The second time let me down."
+  },
+  {
+    "id": "1DQZvcFBdib",
+    "joke": "To be Frank, I'd have to change my name."
+  },
+  {
+    "id": "1Dt4M7Ufaxc",
+    "joke": "Slept like a log last night … woke up in the fireplace."
+  },
+  {
+    "id": "1T01LBXLuzd",
+    "joke": "Why does a Moon-rock taste better than an Earth-rock? Because it's a little meteor."
+  },
+  {
+    "id": "1T0gqOZT0g",
+    "joke": "I thought my wife was joking when she said she'd leave me if I didn't stop signing \"I'm A Believer\"... Then I saw her face."
+  }
+]

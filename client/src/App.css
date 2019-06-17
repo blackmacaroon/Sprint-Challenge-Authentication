@@ -1,0 +1,49 @@
+
+.app {
+  background: url('./img/fatherofthree.jpg') no-repeat;
+  background-size: 100%;
+  height: 900px;
+
+}
+
+.app .head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.head h1 {
+  font-size: 3rem; 
+  padding: 25px 0 0 25px;
+  margin: 0;
+  color: #343555;
+
+}
+
+.app .nav {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  font-size: 2rem;
+}
+
+a:hover {
+  color: #e9352d;
+}
+
+.nav button {
+  margin: 20px;
+  font-size: 1.4rem;
+  padding: 0 20px;
+  border-radius: 4px;
+}
+
+button:hover {
+  border-color:#e9352d;
+  background-color:#e9352d;
+}

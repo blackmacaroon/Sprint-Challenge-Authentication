@@ -12,4 +12,10 @@ server.use(express.json());
 
 configureRoutes(server);
 
+// sanity check route 
+server.get('/', (req, res) => {
+      res.send(`<h2>nailed it!</h2>`)
+      
+});
+
 module.exports = server;
